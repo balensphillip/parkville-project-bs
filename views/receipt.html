@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="receiptcss.css"/>
+    <title>Receipt</title>
+</head>
+<body>
+    <form>
+        <h4>Receipt Form</h4>
+        <div class="mb-3">
+          <label for="exampleInputCustomersname1" class="form-label">Customer's name</label>
+          <input type="text" class="form-control" id="exampleInputCustomersname1">
+          <div id="customersnameHelp" class="form-text">    </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPhonenumber1" class="form-label">Phone Nummber</label>
+          <input type="text" class="form-control" id="exampleInputPhonenumber1">
+          <div id="phonenumberHelp" class="form-text">   </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputGender1" class="form-label">Gender</label>
+          <input type="text" class="form-control" id="exampleInputGender1">
+          <div id="genderHelp" class="form-text">   </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputNin1" class="form-label">NIN</label>
+          <input type="text" class="form-control" id="exampleInputNin1">
+          <div id="ninHelp" class="form-text">   </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputDeparturetime1" class="form-label">Departure Time</label>
+            <input type="text" class="form-control" id="exampleInputDeparturetime1">
+            <div id="departuretimeHelp" class="form-text">   </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputDate1" class="form-label">Date</label>
+            <input type="text" class="form-control" id="exampleInputDate1">
+            <div id="dateHelp" class="form-text">   </div>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script src="/validation/receiptValidate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

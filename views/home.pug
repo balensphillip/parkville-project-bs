@@ -1,0 +1,90 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="preconnect", href="eapis.com") 
+link(rel="stylesheet", type="text/css", href="/css/homecss.css")
+title Parkville parking
+
+.header
+  form(action="/form/submit", method="GET")
+    input.search(type="text", name="text", placeholder=" ")
+    input.submit(type="submit", name="submit", value="Search")
+  .inner-header
+    .logo-container
+      //    <img src="/images/pp-logo.png" alt=""> 
+      h2
+        | Parkville Park
+        span
+    ul.navigation
+      a
+        li About
+      a
+        li Contact
+      a(href="/landingpage")
+        li Log out
+.sidebar-menu
+  ul
+    a(href="/vehicleEntry")
+      li Parking section
+    a(href="/batteryHireEntry")
+      li Battery hire section
+    a(href="/carTyreClinic")
+      li Car tyre section
+    a(href="/signup")
+      li Add new section manager
+    a(href="/departureReceipt")
+      li Retrieve Receipt
+    a(href="/revenueEntry")
+      li Revenue Report
+.main-content
+  .Revenue
+    .Parking-revenue
+      div
+        img(src="/icons/carpark.png", alt="alt")
+        h1 3000
+        span Parking Revenue
+    .Batteryhire-revenue
+      div
+        img(src="/icons/carbattery.png", alt="alt")
+        h1 2500
+        span Batteryhire revenue 
+    .Tyreclinic-revenue
+      div
+        img(src="/icons/cartyre.png", alt="alt")
+        h1 1500
+        span Tyreclinic revenue
+  .table
+        table
+          thead
+           tr
+            th(colspan ='5' style) Signup
+             tr
+              th Username
+              th Email
+              th NIN
+              th Gender
+              th Operations
+              //- th Password
+          tbody 
+              if signups.length 
+              each signup in signups
+                tr
+                td #{signup.username}
+                td #{signup.email}
+                td #{signup.nin}
+                td #{signup.gender}
+                //- td #{signup.password}
+            
+                td 
+                 form(action="/home/delete/"+signup._id, method="GET")
+                  input(type='hidden' name='edit' value='signup._id')
+                  button(id='delete' type='submit' name='delete') Delete
+                 button(onclick='window.print()' id='print' type='submit' name='print') Print
+                 button(id='edit' type='submit' name='edit') Edit
+                //-  form(action="/editSignup/", method="GET")
+                  input(type='hidden' name='edit' value='edit')
+                  button(id='edit' type='submit' name='edit') Edit
+      
+.footer
+      p All rights reserved @ Balenzi Phillip - 0755780352
+script(src="/validation/homeValidate.js")
